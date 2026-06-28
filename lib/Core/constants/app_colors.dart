@@ -11,4 +11,8 @@ class AppColors {
   static const kPrincipalColor = Color(0xffFFFFFF);
   static const kDarkText = Color(0xff000921);
   static const kLightText = Color(0xff2D2D2D);
+  static const kLoginBg = Color(0xffFDFDFD);
+  static const kTestField = Color(0xffF6F6F6);
+  static const kLightBlack = Color(0xff000000);
+
 }
