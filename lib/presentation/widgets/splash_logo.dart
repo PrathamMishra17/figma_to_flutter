@@ -9,14 +9,5 @@ class Logo{
     );
   }
 
-  // static Widget langSelectLogo(){
-  //   return CircleAvatar(
-  //     radius: 78,
-  //     backgroundColor: Colors.transparent,
-  //     child: Image.asset(
-  //         ImagePath.logoPath,
-  //     ),
-  //   );
-  // }
 
 }

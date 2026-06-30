@@ -11,13 +11,16 @@ class DummyApp extends StatelessWidget{
   const DummyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white)
+    return GestureDetector(
+        onTap: ()=> FocusScope.of(context).unfocus(),
+      child: GetMaterialApp(
+          theme: ThemeData(
+              colorScheme: ColorScheme.fromSeed(seedColor: Colors.white)
+          ),
+          debugShowCheckedModeBanner: false,
+          initialRoute: Routes.splashScreen,
+          getPages: Pages().pages
       ),
-      debugShowCheckedModeBanner: false,
-        initialRoute: Routes.splashScreen,
-        getPages: Pages().pages
     );
   }
 }

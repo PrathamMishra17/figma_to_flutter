@@ -26,9 +26,8 @@ class AuthField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Defined standard border style with your 22px circular radius
     final activeBorder = OutlineInputBorder(
-      borderRadius: BorderRadius.circular(22),
+      borderRadius: BorderRadius.circular(10),
       borderSide: BorderSide(color: Theme.of(context).dividerColor, width: 1.0),
     );
 
@@ -57,15 +56,17 @@ class AuthField extends StatelessWidget {
         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
 
         border: disableBorder ? InputBorder.none : activeBorder,
-        enabledBorder: disableBorder ? InputBorder.none : activeBorder,
+        enabledBorder: disableBorder ? InputBorder.none : activeBorder.copyWith(
+          borderSide: BorderSide(
+            color: AppColors.kBorderColor.withAlpha(5)
+          )
+        ),
         focusedBorder: disableBorder
             ? InputBorder.none
             : activeBorder.copyWith(
                 borderSide: BorderSide(
-                  color: Theme.of(
-                    context,
-                  ).primaryColor,
-                  width: 1.5,
+                  color: AppColors.kBorderColor.withAlpha(50),
+                  width: 0,
                 ),
               ),
       ),
