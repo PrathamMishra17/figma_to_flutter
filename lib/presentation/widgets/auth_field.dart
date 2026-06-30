@@ -34,7 +34,7 @@ class AuthField extends StatelessWidget {
     return TextField(
       obscureText: isPassword,
 
-      textAlignVertical: TextAlignVertical.top,
+      textAlignVertical: TextAlignVertical.center,
 
       style: TextStyle(
         fontSize: fontSize ?? 14,

@@ -78,6 +78,8 @@ class LoginScreen extends StatelessWidget {
                           isPassword: false,
                           fillColor: AppColors.kTestField,
                           disableBorder: false,
+                          fontColor: AppColors.kPrimaryContainerColor,
+                          fontSize: 16,
                           trailIcon: Icon(
                             Icons.visibility_off_outlined,
                             color: AppColors.kLightBlack.withOpacity(0.60),
