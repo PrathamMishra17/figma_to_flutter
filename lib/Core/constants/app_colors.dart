@@ -16,5 +16,8 @@ class AppColors {
   static const kLightBlack = Color(0xff000000);
   static const kBorderColor = Color(0x50A3680D);
   static const kForgotColor = Color(0xFFFF7A45);
+  static const kBorderSignUpColor = Color(0xff666666);
+  static const kTextHundred = Color(0xff1D1C1C);
+ static const kLabelTextBorder = Color(0xffDADADA);
 
 }

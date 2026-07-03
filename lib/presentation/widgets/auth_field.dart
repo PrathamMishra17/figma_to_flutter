@@ -10,6 +10,9 @@ class AuthField extends StatelessWidget {
   final double? fontSize;
   final Color? fontColor;
   final bool disableBorder;
+  final ValueChanged<String>? onChanged;
+  final bool? readOnly;
+  final  VoidCallback? onTap;
 
   const AuthField({
     super.key,
@@ -20,6 +23,9 @@ class AuthField extends StatelessWidget {
     this.onTrailIconTap,
     this.fontSize,
     this.fontColor,
+    this.readOnly,
+    this.onTap,
+    this.onChanged,
     required this.disableBorder,
     required this.isPassword,
   });
@@ -33,6 +39,10 @@ class AuthField extends StatelessWidget {
 
     return TextField(
       obscureText: isPassword,
+      readOnly: readOnly?? false,
+      onTap: onTap,
+      onChanged: onChanged,
+
 
       textAlignVertical: TextAlignVertical.center,
 

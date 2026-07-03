@@ -5,4 +5,5 @@ class Routes {
   static const otpVerScreen = '/OtpVerScreen';
   static const forgotPassScreen = '/ForgotPassScreen';
   static const createNewPass = '/CreateNewPass';
+  static const signUpOne = '/SignUpOne';
 }

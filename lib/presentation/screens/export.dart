@@ -1,2 +1,3 @@
 export 'Login/export.dart';
 export 'GetStarted/export.dart';
+export 'signup/export.dart';

@@ -1,5 +1,10 @@
-import 'package:figma_to_flutter/export.dart';
-import 'package:figma_to_flutter/presentation/screens/GetStarted/lang_select_screen.dart';
+import '../../../export.dart';
+
+
+
+
+
+
 
 
 class Pages {
@@ -9,6 +14,7 @@ class Pages {
     GetPage(name: Routes.loginScreen, page: ()=> LoginScreen()),
     GetPage(name: Routes.otpVerScreen, page: ()=> OtpVerification()),
     GetPage(name: Routes.forgotPassScreen, page: ()=> ForgotPassword()),
-    GetPage(name: Routes.createNewPass, page: ()=>CreateNewPass())
+    GetPage(name: Routes.createNewPass, page: ()=>CreateNewPass()),
+    GetPage(name: Routes.signUpOne, page: ()=>RegistrationScreen())
   ];
 }
