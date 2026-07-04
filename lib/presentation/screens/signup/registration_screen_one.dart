@@ -1,5 +1,3 @@
-import 'package:figma_to_flutter/presentation/screens/signup/components/dropdown_section.dart';
-import 'package:figma_to_flutter/presentation/screens/signup/components/upload_section_dotted.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../export.dart';
@@ -13,25 +11,27 @@ class RegistrationScreen extends GetView<RegistrationController> {
 
     final double screenWidth = Get.width;
     final double screenHeight = Get.height;
-    final bool isTablet = screenWidth > 600;
-    final double horizontalPadding = screenWidth * 0.05;
 
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.kLoginBg,
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor:AppColors.kLoginBg,
           elevation: 0,
+          automaticallyImplyLeading: false,
           title: Column(
             children: [
               SizedBox(height: screenHeight * 0.030),
               Row(
                 children: [
-                  Icon(
-                    Icons.arrow_back_ios,
-                    color: AppColors.kTextHundred,
-                    size: 13,
-                  ),
+                 IconButton(onPressed: (){
+                   Get.back();
+                 },
+                     icon:  Icon(
+                       Icons.arrow_back_ios,
+                       color: AppColors.kTextHundred,
+                       size: 13,
+                     )),
                   SizedBox(width: screenWidth * 0.33),
                   Text(
                     "Step 1",
@@ -76,75 +76,180 @@ class RegistrationScreen extends GetView<RegistrationController> {
                   style: GoogleFonts.nunitoSans(
                     fontWeight: FontWeight.w400,
                     fontSize: 16,
-                    color: AppColors.kSubTextColor
+                    color: AppColors.kSubTextColor,
                   ),
                 ),
-                SizedBox(
-                  height: screenHeight*0.013,
+                SizedBox(height: screenHeight * 0.013),
+                Text(
+                  "Your Profile Picture",
+                  style: GoogleFonts.poppins(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    color: AppColors.kDarkText,
+                  ),
                 ),
-                Text("Your Profile Picture",
-                style: GoogleFonts.poppins(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w400,
-                  color: AppColors.kDarkText
+                SizedBox(height: screenHeight * 0.0047),
+                UploadSectionDotted.buildProfilePicker(
+                  screenWidth,
+                  screenHeight,
                 ),
+                SizedBox(height: screenHeight * 0.019),
+                LabelAuthField.buildCustomTextField(
+                  label: "Enter Full Name",
+                  isRequired: true,
                 ),
-                SizedBox(
-                  height: screenHeight*0.0047,
-                ),
-                UploadSectionDotted.buildProfilePicker(screenWidth,screenHeight),
-                SizedBox(
-                  height: screenHeight*0.019,
-                ),
-               LabelAuthField.buildCustomTextField(
-                   label: "Enter Full Name",
-                   isRequired: true),
 
                 LabelAuthField.buildCustomTextField(
-                    label: "Enter Email Address",
-                    isRequired: true),
-
-                LabelAuthField.buildCustomTextField(
-                    label: "Enter Phone Number",
-                    isRequired: true),
-
-                LabelAuthField.buildCustomTextField(
-                    label: "Enter Password",
-                    isRequired: true),
-
-                LabelAuthField.buildCustomTextField(
-                    label: "Enter Confirm Password",
-                    isRequired: true),
-                const SizedBox(
-                  height: 3,
+                  label: "Enter Email Address",
+                  isRequired: true,
                 ),
+
+                LabelAuthField.buildCustomTextField(
+                  label: "Enter Phone Number",
+                  isRequired: true,
+                ),
+
+                LabelAuthField.buildCustomTextField(
+                  label: "Enter Password",
+                  isRequired: true,
+                ),
+
+                LabelAuthField.buildCustomTextField(
+                  label: "Enter Confirm Password",
+                  isRequired: true,
+                ),
+                const SizedBox(height: 3),
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text("Gender",
-                    style: GoogleFonts.poppins(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w600,
-                      color: AppColors.kLightText
-                    ),
-                    ),
-                    SizedBox(
-                      width: screenWidth*0.38,
-                    ),
-                    Text("Age",
+                    Text(
+                      "Gender",
                       style: GoogleFonts.poppins(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600,
-                          color: AppColors.kLightText
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.kLightText,
                       ),
                     ),
-
+                    SizedBox(width: screenWidth * 0.38),
+                    Text(
+                      "Age",
+                      style: GoogleFonts.poppins(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.kLightText,
+                      ),
+                    ),
                   ],
-
                 ),
-                GenderAndAgeSelectionSection(controller: controller)
+                GenderAndAgeSelectionSection(controller: controller),
 
+                SizedBox(height: screenHeight * 0.022),
+
+                Text(
+                  "Date of birth",
+                  style: GoogleFonts.poppins(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 12,
+                    color: AppColors.kLightText,
+                  ),
+                ),
+
+                SizedBox(height: screenHeight * 0.012),
+
+                DobSelectionField(controller: controller),
+
+                SizedBox(height: screenHeight * 0.029),
+                Text(
+                  "Contact Details",
+                  style: GoogleFonts.poppins(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    color: AppColors.kDarkText,
+                  ),
+                ),
+
+                SizedBox(height: screenHeight * 0.019),
+
+                LabelAuthField.buildCustomTextField(
+                  label: "Alternate Phone Number (optional)",
+                  isRequired: false,
+                ),
+
+                LabelAuthField.buildCustomTextField(
+                  label: "Official Email (optional)",
+                  isRequired: false,
+                ),
+
+                const SizedBox(height: 8),
+
+                Text(
+                  "Add Location",
+                  style: GoogleFonts.poppins(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    color: AppColors.kDarkText,
+                  ),
+                ),
+
+                SizedBox(height: screenHeight * 0.019),
+
+                LabelAuthField.buildCustomTextField(
+                  label: "State",
+                  isRequired: true,
+                  suffixIcon: Icon(
+                    Icons.arrow_forward_ios,
+                    size: 16,
+                    color: AppColors.kSubTextColor,
+                  ),
+                ),
+                LabelAuthField.buildCustomTextField(
+                  label: "District",
+                  isRequired: true,
+                  suffixIcon: Icon(
+                    Icons.arrow_forward_ios,
+                    size: 16,
+                    color: AppColors.kSubTextColor,
+                  ),
+                ),
+                LabelAuthField.buildCustomTextField(
+                  label: "Enter Pincode",
+                  isRequired: true,
+                ),
+
+                SizedBox(height: screenHeight * 0.125),
+
+                CustomButton(
+                  height: screenHeight * 0.059,
+                  width: double.infinity,
+                  color: AppColors.kPrimaryContainerColor,
+                  onTap: (){
+                    Get.toNamed(Routes.registrationScreenTwo,
+                    );
+                  },
+                  content: Text(
+                    "Submit",
+                    style: GoogleFonts.poppins(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      color: AppColors.kLoginBg,
+                    ),
+                  ),
+                ),
+                SizedBox(height: screenHeight * 0.057),
+
+                Text(
+                  "”By creating an account ,you agree to Vedriti’s Terms os service and Privacy Policy.” ",
+
+                  style: GoogleFonts.poppins(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w400,
+                    color: AppColors.kSubTextColor
+                  ),
+                ),
+               const  SizedBox(
+                  height: 20,
+                )
               ],
             ),
           ),

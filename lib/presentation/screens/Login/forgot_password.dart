@@ -112,7 +112,7 @@ class ForgotPassword extends StatelessWidget {
                               ),
                               GestureDetector(
                                 onTap: () {
-
+                                    Get.toNamed(Routes.signUpOne);
                                 },
                                 child: Text(
                                   "Sign up",

@@ -1,3 +1,5 @@
+
+
 import '../../../export.dart';
 
 
@@ -15,6 +17,8 @@ class Pages {
     GetPage(name: Routes.otpVerScreen, page: ()=> OtpVerification()),
     GetPage(name: Routes.forgotPassScreen, page: ()=> ForgotPassword()),
     GetPage(name: Routes.createNewPass, page: ()=>CreateNewPass()),
-    GetPage(name: Routes.signUpOne, page: ()=>RegistrationScreen())
+    GetPage(name: Routes.signUpOne, page: ()=>RegistrationScreen()),
+    GetPage(name: Routes.registrationScreenTwo, page:()=> RegistrationScreenTwo()),
+    GetPage(name: Routes.registrationScreenThree, page:()=>RegistrationScreenThree() )
   ];
 }

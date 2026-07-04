@@ -19,5 +19,6 @@ class AppColors {
   static const kBorderSignUpColor = Color(0xff666666);
   static const kTextHundred = Color(0xff1D1C1C);
  static const kLabelTextBorder = Color(0xffDADADA);
+ static const kUploadText = Color(0xf57585AE);
 
 }

@@ -6,4 +6,6 @@ class Routes {
   static const forgotPassScreen = '/ForgotPassScreen';
   static const createNewPass = '/CreateNewPass';
   static const signUpOne = '/SignUpOne';
+  static const registrationScreenTwo = '/RegistrationTwo';
+  static const registrationScreenThree = '/RegistrationThree';
 }
