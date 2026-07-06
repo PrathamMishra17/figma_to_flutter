@@ -97,21 +97,25 @@ class RegistrationScreen extends GetView<RegistrationController> {
                 LabelAuthField.buildCustomTextField(
                   label: "Enter Full Name",
                   isRequired: true,
+                  hint: "Nikita Salunke"
                 ),
 
                 LabelAuthField.buildCustomTextField(
                   label: "Enter Email Address",
                   isRequired: true,
+                  hint: "nikitasalunke1233@gmail.com"
                 ),
 
                 LabelAuthField.buildCustomTextField(
                   label: "Enter Phone Number",
                   isRequired: true,
+                  hint: "+91 5050000010"
                 ),
 
                 LabelAuthField.buildCustomTextField(
                   label: "Enter Password",
                   isRequired: true,
+
                 ),
 
                 LabelAuthField.buildCustomTextField(
@@ -174,11 +178,13 @@ class RegistrationScreen extends GetView<RegistrationController> {
                 LabelAuthField.buildCustomTextField(
                   label: "Alternate Phone Number (optional)",
                   isRequired: false,
+                  hint: "9090909099"
                 ),
 
                 LabelAuthField.buildCustomTextField(
                   label: "Official Email (optional)",
                   isRequired: false,
+                  hint: "nikitasalunke@gmail.com"
                 ),
 
                 const SizedBox(height: 8),
@@ -202,6 +208,7 @@ class RegistrationScreen extends GetView<RegistrationController> {
                     size: 16,
                     color: AppColors.kSubTextColor,
                   ),
+                  hint: "e.g. Mahahrashtra"
                 ),
                 LabelAuthField.buildCustomTextField(
                   label: "District",
@@ -211,10 +218,12 @@ class RegistrationScreen extends GetView<RegistrationController> {
                     size: 16,
                     color: AppColors.kSubTextColor,
                   ),
+                  hint: "e.g. Pune"
                 ),
                 LabelAuthField.buildCustomTextField(
                   label: "Enter Pincode",
                   isRequired: true,
+                  hint: "Enter Pincode"
                 ),
 
                 SizedBox(height: screenHeight * 0.125),
@@ -236,7 +245,7 @@ class RegistrationScreen extends GetView<RegistrationController> {
                     ),
                   ),
                 ),
-                SizedBox(height: screenHeight * 0.057),
+                SizedBox(height: screenHeight * 0.025),
 
                 Text(
                   "”By creating an account ,you agree to Vedriti’s Terms os service and Privacy Policy.” ",
