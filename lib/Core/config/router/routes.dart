@@ -8,4 +8,5 @@ class Routes {
   static const signUpOne = '/SignUpOne';
   static const registrationScreenTwo = '/RegistrationTwo';
   static const registrationScreenThree = '/RegistrationThree';
+  static const dashboardScreen = '/DashboardScreen';
 }

@@ -20,5 +20,12 @@ class AppColors {
   static const kTextHundred = Color(0xff1D1C1C);
  static const kLabelTextBorder = Color(0xffDADADA);
  static const kUploadText = Color(0xf57585AE);
-
+ static const kBorderNotification = Color(0xff28303F);
+ static const kSecondaryContainer = Color(0xff162140);
+ static const kHeaderSelectionBg = Color(0xff495E9C);
+ static const kChildHeaderBG = Color(0xffF9FBFF);
+ static const kBorderWhite = Color(0xffF8F9FA);
+ static const kOrderBannerBg = Color(0xffFFFCFC);
+ static const kText93Colors = Color(0xff939393);
+ static const kDrawerColor = Color(0xffF3F3F3);
 }

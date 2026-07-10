@@ -110,7 +110,10 @@ class RegistrationScreenThree extends StatelessWidget{
                               fontWeight: FontWeight.w600,
                               color: AppColors.kPrincipalColor
                           ),
-                        )
+                        ),
+                      onTap: (){
+                          Get.toNamed(Routes.dashboardScreen);
+                      },
                     )
                   ],
                 ),

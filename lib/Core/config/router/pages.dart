@@ -5,10 +5,6 @@ import '../../../export.dart';
 
 
 
-
-
-
-
 class Pages {
   List<GetPage<dynamic>> pages = [
     GetPage(name: Routes.splashScreen, page: ()=> SplashScreen()),
@@ -19,6 +15,7 @@ class Pages {
     GetPage(name: Routes.createNewPass, page: ()=>CreateNewPass()),
     GetPage(name: Routes.signUpOne, page: ()=>RegistrationScreen()),
     GetPage(name: Routes.registrationScreenTwo, page:()=> RegistrationScreenTwo()),
-    GetPage(name: Routes.registrationScreenThree, page:()=>RegistrationScreenThree() )
+    GetPage(name: Routes.registrationScreenThree, page:()=>RegistrationScreenThree()),
+    GetPage(name: Routes.dashboardScreen, page: ()=> DashBoardScreen())
   ];
 }
